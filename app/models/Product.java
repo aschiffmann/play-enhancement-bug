@@ -1,8 +1,11 @@
 package models;
 
+import play.core.enhancers.PropertiesEnhancer;
+
 public class Product {
 
     public String name;
+    @PropertiesEnhancer.GeneratedSetAccessor
     public Integer price;
 
     public void setPrice(Integer price) {
@@ -12,4 +15,3 @@ public class Product {
         this.price = price;
     }
 }
-
